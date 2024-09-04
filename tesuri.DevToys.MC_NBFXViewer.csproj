@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+   <IsPackable>true</IsPackable>
+    <Version>1.0.0</Version>
+    <Title>tesuri.DevToy.MC_NBFXViewer</Title>
+    <Description>An extension for DevToys MC_NBFX Viewer</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/tesurijp/DevToys.MC_NBFXViewer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tesurijp/DevToys.MC_NBFXViewer</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Authors>tesuri</Authors>
+    <PackageTags>devtoys-app devtoys binary xml nbfx wcf</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevToys.Api" Version="2.0.5-preview" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MC_NBFXViewer.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MC_NBFXViewer.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="MC_NBFXViewer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MC_NBFXViewer.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
